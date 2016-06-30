@@ -99,10 +99,40 @@
         <apply enter="only-blue" message="You may not enter enemy spawns!">
             <cuboid min="9569,7,-270" max="9566,7,-269.5"/>
         </apply>
-        <apply block="deny-players" region="everywhere"/>
-        <apply velocity="0,1.25,0">
-            <cuboid min="31,21,51" max="28,22,48"/>
-            <cuboid min="-27,21,51" max="-30,22,48"/>
+        <apply block="deny-players">
+            <rectangle min="-oo,-oo" max="oo,oo"/>
         </apply>
+        <!--Spawn JumpPads-->
+        <apply velocity="0,0.5,1.5">
+            <cuboid min="9567,7,-253" max="9568,8.5,-250"/>
+        </apply>
+        <apply velocity="-1.5,0.5,0.0">
+            <cuboid min="9550,7,-271" max="9547,8.5,-270"/>
+        </apply>
+        <apply velocity="1.5,0.5,0.0">
+            <cuboid min="9523,7,-208" max="9526,8.5,-209"/>
+        </apply>
+        <apply velocity="-1.5,0.5,0.0">
+            <cuboid min="9550,7,-271" max="9547,8.5,-270"/>
+        </apply>
+        <!--Other Jump Pads-->
+        <union name="Gapple_1">
+            <cuboid min="9506,6,-270" max="9503,11,-273"/>
+        </union>
+        <union name="Gapple_2">
+            <cuboid min="9566,6,-210" max="9569,11,-206"/>
+        </union>
     </regions>
+    <pickups>
+        <pickup id="Gapple_Spawner" name="Golden Apple" region="Gapple_1" refresh="20s">
+            <kit>
+                <item slot="3">golden apple</item>
+            </kit>
+        </pickup>
+        <pickup id="Gapple_Spawner" name="Golden Apple" region="Gapple_2" refresh="20s">
+            <kit>
+                <item slot="3">golden apple</item>
+            </kit>
+        </pickup>
+    </pickups>
 </map>    
