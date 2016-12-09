@@ -1,0 +1,66 @@
+<xml version="1.0"?>
+<map proto="1.4.2" game="Skywars">
+<name>Skyward Valley</name>
+<version>1.0.0</version>
+<authors>
+    <author uuid="4f71d9f9-953d-4b5d-86ae-9d46e5083d2b"/> <!-- Radstock2 -->
+	<author uuid="cc67ec01-4b98-4e65-b0ed-49c14c6cb88b"/> <!-- DiabolicForce -->
+	<author uuid="e7fe6589-3b2c-435f-9c03-8e82d5c7ca84"/> <!-- TempestTemplar -->
+</authors>
+<contributors>
+	<contributor uuid="fe3608b7-d105-4029-8800-34b3147065b6" contribution="Helping with the design"/> <!-- rockymine -->
+</contributors>
+<include src="skywars.xml"/>
+<maxbuildheight>BUILD HEIGHT NUMBER HERE</maxbuildheight>
+<kits>
+    <kit id="all-effects">
+        <!-- Effects to give all players/observers, i.e. night vision -->
+    </kit>
+</kits>
+<spawns>
+    <default kit="all-effects" region="observer-spawn"/>
+    <spawns spread="true" exclusive="true" kit="spawn-effects" angle="CENTRE OF YOUR MAP HERE"> <!-- where players will be looking when they spawn -->
+        <spawn region="player-1-spawn"/>
+        <spawn region="player-2-spawn"/>
+        <spawn region="player-3-spawn"/>
+        <spawn region="player-4-spawn"/>
+        <spawn region="player-5-spawn"/>
+        <spawn region="player-6-spawn"/>
+        <spawn region="player-7-spawn"/>
+        <spawn region="player-8-spawn"/>
+    </spawns>
+</spawns>
+<regions>
+	<!-- obs spawn -->
+    <point id="observer-spawn">OBSERVER SPAWNPOINT HERE</point>
+    <!-- players spawn -->
+    <point id="player-1-spawn">PLAYER 1 SPAWNPOINT HERE</point>
+    <point id="player-2-spawn">PLAYER 2 SPAWNPOINT HERE</point>
+    <point id="player-3-spawn">PLAYER 3 SPAWNPOINT HERE</point>
+    <point id="player-4-spawn">PLAYER 4 SPAWNPOINT HERE</point>
+    <point id="player-5-spawn">PLAYER 5 SPAWNPOINT HERE</point>
+    <point id="player-6-spawn">PLAYER 6 SPAWNPOINT HERE</point>
+    <point id="player-7-spawn">PLAYER 7 SPAWNPOINT HERE</point>
+    <point id="player-8-spawn">PLAYER 8 SPAWNPOINT HERE</point>
+    <!-- Tier 1 chests (player islands) -->
+    <sphere id="player-1-chests" radius="PLACE SPHERE RADIUS HERE" origin="PLAYER 1 CENTRE OF ISLAND HERE"/>
+    <sphere id="player-2-chests" radius="PLACE SPHERE RADIUS HERE" origin="PLAYER 2 CENTRE OF ISLAND HERE"/>
+    <sphere id="player-3-chests" radius="PLACE SPHERE RADIUS HERE" origin="PLAYER 3 CENTRE OF ISLAND HERE"/>
+    <sphere id="player-4-chests" radius="PLACE SPHERE RADIUS HERE" origin="PLAYER 4 CENTRE OF ISLAND HERE"/>
+    <sphere id="player-5-chests" radius="PLACE SPHERE RADIUS HERE" origin="PLAYER 5 CENTRE OF ISLAND HERE"/>
+    <sphere id="player-6-chests" radius="PLACE SPHERE RADIUS HERE" origin="PLAYER 6 CENTRE OF ISLAND HERE"/>
+    <sphere id="player-7-chests" radius="PLACE SPHERE RADIUS HERE" origin="PLAYER 7 CENTRE OF ISLAND HERE"/>
+    <sphere id="player-8-chests" radius="PLACE SPHERE RADIUS HERE" origin="PLAYER 8 CENTRE OF ISLAND HERE"/>
+    <!-- Tier 2 chests (outer middle) -->
+    <negative id="tier-2-chests">
+        <union id="all-chests">
+            <region id="tier-1-chests"/>
+            <region id="tier-3-chests"/>
+        </union>
+    </negative>
+    <!-- Tier 3 chests (very middle) -->
+    <union id="tier-3-chests">
+        <sphere radius="PLACE SPHERE RADIUS HERE" origin="MIDDLE CHESTS CENTRE HERE"/> 
+    </union>
+</regions>
+</map>
