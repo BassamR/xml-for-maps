@@ -54,7 +54,7 @@
     </spawn>
     <spawn team="blue" kit="blue">
     	<regions yaw="0">
-    		<cylinder base="7,109,23" radius="2" height="3"/>
+    	    <cylinder base="7,109,23" radius="2" height="3"/>
     	</regions>
     </spawn>
     <default>
