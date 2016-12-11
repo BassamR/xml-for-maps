@@ -12,22 +12,23 @@
     <contributor uuid="fe3608b7-d105-4029-8800-34b3147065b6" contribution="Helping with the layout"/> <!-- rockymine -->
 </contributors>
 <gamemode>ctw</gamemode>
+<timelock>on</timelock>
 <rules>
-	<rule>Breaking/placing blocks in the spawn island is not allowed.</rule>
+	<rule>Breaking/placing blocks in YOUR spawn island is not allowed.</rule>
 	<rule>Breaking the bridge leading to the iron supplies in YOUR spawn island is not allowed.</rule>
 </rules>
 <broadcasts>
 	<tip after="4s" every="10m">The iron is located behind the spawn island.</tip>
 </broadcasts>
 <teams>
-	<team color="dark red" max="5" max-overfill="6">Red</team>
-    <team color="blue" max="5" max-overfill="6">Blue</team>
+	<team color="dark red" max="8" max-overfill="9">Red</team>
+    <team color="blue" max="8" max-overfill="9">Blue</team>
 </teams>
 <kits>
-    <kit name="spawn">
-        <item slot="0" material="iron sword" unbreakable="true"/>
-	<item slot="1" material="bow" unbreakable="true"/>
-	<item slot="2" material="iron pickaxe" unbreakable="true"/>
+	<kit name="spawn">
+		<item slot="0" material="iron sword" unbreakable="true"/>
+		<item slot="1" material="bow" unbreakable="true"/>
+		<item slot="2" material="iron pickaxe" unbreakable="true"/>
         <item slot="3" material="iron axe" unbreakable="true"/>
         <item slot="28" amount="32">arrow</item>
         <item slot="4" amount="64" damage="1">wood</item>
@@ -48,12 +49,12 @@
 <spawns>
     <spawn team="red" kit="red">
         <regions yaw="180">
-            <cylinder base="4,117,173" radius="3" height="5"/> <!-- doesnt work -->
+            <cylinder base="7,109,244" radius="2" height="3"/>
         </regions>
     </spawn>
     <spawn team="blue" kit="blue">
     	<regions yaw="0">
-    		<cylinder base="7,117,55" radius="3" height="5"/>
+    		<cylinder base="7,109,23" radius="2" height="3"/>
     	</regions>
     </spawn>
     <default>
@@ -63,19 +64,53 @@
     </default>		
 </spawns>
 <wools>
-    <wool team="blue" color="magenta" location="-3,106,161"> <!-- doesnt work -->
+    <wool team="blue" color="magenta" location="52,123,265">
 	    <monument>
-		    <block>28,108,43</block> <!-- change block -->
+		    <block>10,110,23</block>
 	    </monument>
 	</wool>
-	<wool team="red" color="lime" location="9,107,67"> <!-- doenst work -->
+	<wool team="red" color="lime" location="52,123,65">
 	    <monument>
-		    <block>-19,108,184</block> <!-- change block -->
+		    <block>9,110,244</block>
 	    </monument>
 	</wool>
 </wools>
-<regions></regions>
-<filters></filters>
+<regions>
+    <cuboid id="lime-woolroom" min="41,114,49" max="64,146,80"/>
+    <cuboid id="magenta-woolroom" min="41,114,181" max="64,146,219"/>
+    <cuboid id="red-spawn" min="20,129,255" max="-14,85,232"/>
+    <cuboid id="blue-spawn" min="20,129,31" max="-14,85,10"/>
+    <apply block-place="never">
+        <region>
+            <region id="lime-woolroom">
+            <region id="magenta-woolroom">
+        </region>
+    </apply>
+    <apply enter="only-red" message="You may not enter the enemy woolroom!">
+        <region>
+            <region id="lime-woolroom">
+        </region>
+    </apply>
+    <apply enter="only-blue" message="You may not enter the enemy woolroom!">
+        <region>
+            <region id="magenta-woolroom">
+        </region>
+    </apply>
+    <apply enter="only-red" message="You may not enter the enemy's base!">
+        <region>
+            <region id="red-spawn">
+        </region>
+    </apply>
+    <apply enter="only-blue" message="You may not enter the enemy's base!">
+        <region>
+            <region id="blue-spawn">
+        </region>
+    </apply>  
+</regions>
+<filters>
+    <team id="only-blue">blue</team>
+    <team id="only-red">red</team>
+</filters>
 <itemremove>
     <item>iron sword</item>
     <item>bow</item>
@@ -87,7 +122,7 @@
     <item>cooked fish</item>
 </itemremove>
 <kill-rewards>
-    <item amount="1">golden apple</item>
+	<item amount="1">golden apple</item>
     <item amount="5">arrow</item>
 </kill-rewards>
 </map>
