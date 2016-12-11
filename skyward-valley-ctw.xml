@@ -14,14 +14,14 @@
 <gamemode>ctw</gamemode>
 <timelock>on</timelock>
 <rules>
-	<rule>Breaking/placing blocks in YOUR spawn island is not allowed.</rule>
-	<rule>Breaking the bridge leading to the iron supplies in YOUR spawn island is not allowed.</rule>
+    <rule>Breaking/placing blocks in YOUR spawn island is not allowed.</rule>
+    <rule>Breaking the bridge leading to the iron supplies in YOUR spawn island is not allowed.</rule>
 </rules>
 <broadcasts>
-	<tip after="4s" every="10m">The iron is located behind the spawn island.</tip>
+    <tip after="4s" every="10m">The iron is located behind the spawn island.</tip>
 </broadcasts>
 <teams>
-	<team color="dark red" max="8" max-overfill="9">Red</team>
+    <team color="dark red" max="8" max-overfill="9">Red</team>
     <team color="blue" max="8" max-overfill="9">Blue</team>
 </teams>
 <kits>
