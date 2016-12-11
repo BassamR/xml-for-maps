@@ -25,10 +25,10 @@
     <team color="blue" max="8" max-overfill="9">Blue</team>
 </teams>
 <kits>
-	<kit name="spawn">
-		<item slot="0" material="iron sword" unbreakable="true"/>
-		<item slot="1" material="bow" unbreakable="true"/>
-		<item slot="2" material="iron pickaxe" unbreakable="true"/>
+    <kit name="spawn">
+        <item slot="0" material="iron sword" unbreakable="true"/>
+	<item slot="1" material="bow" unbreakable="true"/>
+	<item slot="2" material="iron pickaxe" unbreakable="true"/>
         <item slot="3" material="iron axe" unbreakable="true"/>
         <item slot="28" amount="32">arrow</item>
         <item slot="4" amount="64" damage="1">wood</item>
@@ -65,15 +65,15 @@
 </spawns>
 <wools>
     <wool team="blue" color="magenta" location="52,123,265">
-	    <monument>
-		    <block>10,110,23</block>
-	    </monument>
-	</wool>
-	<wool team="red" color="lime" location="52,123,65">
-	    <monument>
-		    <block>9,110,244</block>
-	    </monument>
-	</wool>
+	<monument>
+	    <block>10,110,23</block>
+	</monument>
+    </wool>
+    <wool team="red" color="lime" location="52,123,65">
+        <monument>
+	    <block>9,110,244</block>
+	</monument>
+    </wool>
 </wools>
 <regions>
     <cuboid id="lime-woolroom" min="41,114,49" max="64,146,80"/>
