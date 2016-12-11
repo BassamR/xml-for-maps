@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<map proto="1.4.2">
+<name>Skyward Valley</name>
+<version>1.0.0</version>
+<objective>Be the first team to capture the enemy's wool!</objective>
+<authors>
+    <author uuid="4f71d9f9-953d-4b5d-86ae-9d46e5083d2b"/> <!-- Radstock2 -->
+    <author uuid="cc67ec01-4b98-4e65-b0ed-49c14c6cb88b"/> <!-- DiaolicForce -->
+    <author uuid="e7fe6589-3b2c-435f-9c03-8e82d5c7ca84"/> <!-- TempestTemplar -->
+</authors>
+<contributors>
+    <contributor uuid="fe3608b7-d105-4029-8800-34b3147065b6" contribution="Helping with the layout"/> <!-- rockymine -->
+</contributors>
+<gamemode>ctw</gamemode>
+<rules>
+	<rule>Breaking/placing blocks in the spawn island is not allowed.</rule>
+	<rule>Breaking the bridge leading to the iron supplies in YOUR spawn island is not allowed.</rule>
+</rules>
+<broadcasts>
+	<tip after="4s" every="10m">The iron is located behind the spawn island.</tip>
+</broadcasts>
+<teams>
+	<team color="dark red" max="5" max-overfill="6">Red</team>
+    <team color="blue" max="5" max-overfill="6">Blue</team>
+</teams>
+<kits>
+    <kit name="spawn">
+        <item slot="0" material="iron sword" unbreakable="true"/>
+	<item slot="1" material="bow" unbreakable="true"/>
+	<item slot="2" material="iron pickaxe" unbreakable="true"/>
+        <item slot="3" material="iron axe" unbreakable="true"/>
+        <item slot="28" amount="32">arrow</item>
+        <item slot="4" amount="64" damage="1">wood</item>
+        <item slot="5" amount="64" damage="1">wood</item>
+        <item slot="6" amount="32">glass</item>
+        <item slot="7" amount="1">golden apple</item>
+        <item slot="8" amount="64" name="`rFlying Fish">cooked fish</item>
+        <potion duration="2" amplifier="3">heal</potion>
+        <potion duration="2">damage resistance</potion>
+    </kit>
+    <kit name="red" parents="spawn">
+        <chestplate color="cd0000" unbreakable="true">leather chestplate</chestplate>
+    </kit>
+    <kit name="blue" parents="spawn">
+        <chestplate color="0066cc" unbreakable="true">leather chestplate</chestplate>
+    </kit> 
+</kits>
+<spawns>
+    <spawn team="red" kit="red">
+        <regions yaw="180">
+            <cylinder base="4,117,173" radius="3" height="5"/> <!-- doesnt work -->
+        </regions>
+    </spawn>
+    <spawn team="blue" kit="blue">
+    	<regions yaw="0">
+    		<cylinder base="7,117,55" radius="3" height="5"/>
+    	</regions>
+    </spawn>
+    <default>
+        <regions yaw="90">
+            <cylinder base="-65,160,114" radius="4" height="6"/>
+        </regions>
+    </default>		
+</spawns>
+<wools>
+    <wool team="blue" color="magenta" location="-3,106,161"> <!-- doesnt work -->
+	    <monument>
+		    <block>28,108,43</block> <!-- change block -->
+	    </monument>
+	</wool>
+	<wool team="red" color="lime" location="9,107,67"> <!-- doenst work -->
+	    <monument>
+		    <block>-19,108,184</block> <!-- change block -->
+	    </monument>
+	</wool>
+</wools>
+<regions></regions>
+<filters></filters>
+<itemremove>
+    <item>iron sword</item>
+    <item>bow</item>
+    <item>iron pickaxe</item>
+    <item>iron axe</item>
+    <item>arrow</item>
+    <item>wood</item>
+    <item>glass</item>
+    <item>cooked fish</item>
+</itemremove>
+<kill-rewards>
+    <item amount="1">golden apple</item>
+    <item amount="5">arrow</item>
+</kill-rewards>
+</map>
