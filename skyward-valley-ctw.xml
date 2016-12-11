@@ -80,10 +80,12 @@
     <cuboid id="magenta-woolroom" min="41,114,181" max="64,146,219"/>
     <cuboid id="red-spawn" min="20,129,255" max="-14,85,232"/>
     <cuboid id="blue-spawn" min="20,129,31" max="-14,85,10"/>
+    <cuboid id="underbridge" min="-5,44,-8" max="90,0,270"/> <!-- to prevent underbridging -->
     <apply block="never">
         <region>
             <region id="lime-woolroom">
             <region id="magenta-woolroom">
+            <region id="underbridge">
         </region>
     </apply>
     <apply enter="only-red" message="You may not enter the enemy woolroom!">
