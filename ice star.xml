@@ -10,7 +10,7 @@
     <contributor uuid="cc67ec01-4b98-4e65-b0ed-49c14c6cb88b" contribution="Writing the xml"/> <!-- DiabolicForce -->
 </contributors>
 <teams>
-	<team color="dark red" max="" max-overfill="">Red</team> <!-- Update team sizes -->
+    <team color="dark red" max="" max-overfill="">Red</team> <!-- Update team sizes -->
     <team color="blue" max="" max-overfill="">Blue</team> <!-- Update team sizes -->
 </teams>
 <kits></kits>
