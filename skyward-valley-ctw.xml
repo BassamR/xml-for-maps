@@ -2,7 +2,7 @@
 <map proto="1.4.2">
 <name>Skyward Valley</name>
 <version>1.0.0</version>
-<objective>Be the first team to capture the enemy's wool!</objective>
+<objective>Capture the enemy's wool!</objective>
 <authors>
     <author uuid="4f71d9f9-953d-4b5d-86ae-9d46e5083d2b"/> <!-- Radstock2 -->
     <author uuid="cc67ec01-4b98-4e65-b0ed-49c14c6cb88b"/> <!-- DiaolicForce -->
