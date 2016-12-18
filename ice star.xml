@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<map proto="1.4.2">
+<name>Ice Star</name>
+<version>1.0.0</version>
+<objective>Destroy the other team's obsidian monument!</objective>
+<authors>
+	<author uuid="bd554fb5-c768-4153-9949-6c0a20a98801"/> <!-- Viclaxy_fanfan -->
+</authors>
+<contributors>
+	<contributor uuid="cc67ec01-4b98-4e65-b0ed-49c14c6cb88b" contribution="Writing the xml"/> <!-- DiabolicForce -->
+</contributors>
+<teams></teams>
+<kits></kits>
+<spawns></spawns>
+<destroyables></destroyables>
+<regions></regions>
+<filters></filters>
+<kill-rewards></kill-rewards>
+<itemremove></itemremove>
+</map>
