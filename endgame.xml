@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<map proto="1.4.2">
+<name>Endgame</name>
+<version>1.0.0</version>
+<objective>Destroy the enemy team's obsidian monument!</objective>
+<authors>
+	<author uuid="b956f8a4-b714-4ddd-b53f-f13a4655a667"/> <!-- KILLLERCLOWNS -->
+	<author uuid="9b41ac35-bf25-4f40-8dad-8aa52dcc632e"/> <!-- PhilloSophT -->
+</authors>
+<contributors>
+	<contributor uuid="cc67ec01-4b98-4e65-b0ed-49c14c6cb88b" contribution="Writing the xml"/> <!-- DiabolicForce -->
+</contributors>
+<teams>
+    <team color="dark red" max="" max-overfill="">Red</team> <!-- Update team sizes -->
+    <team color="blue" max="" max-overfill="">Blue</team> <!-- Update team sizes -->
+</teams>
+<kits></kits>
+<spawns></spawns>
+<destroyables></destroyables>
+<regions></regions>
+<filters></filters>
+<kill-rewards>
+	<item amount="1">golden apple</item>
+</kill-rewards>
+<itemremove></itemremove>
+</map>
